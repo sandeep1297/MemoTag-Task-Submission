@@ -1,8 +1,7 @@
-fastapi==0.110.0
-uvicorn[standard]==0.29.0
-openai-whisper==20231117
-librosa==0.10.1
-scikit-learn==1.4.1.post1
-numpy==1.26.4
-pydantic==1.10.14
-ffmpeg-python==0.2.0
+fastapi
+uvicorn
+pydantic
+librosa
+numpy
+scikit-learn
+whisper
