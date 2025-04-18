@@ -12,7 +12,7 @@ from sklearn.ensemble import IsolationForest
 from pydantic import BaseModel
 from typing import Dict
 
-app = FastAPI()
+app = FastAPI(title="Audio-api")
 
 class Features(BaseModel):
     pauses_per_sentence: float
