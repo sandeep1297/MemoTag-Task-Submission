@@ -4,7 +4,7 @@ from fastapi.responses import JSONResponse, RedirectResponse
 import uvicorn
 import tempfile
 import os
-from whisper import load_model
+import whisper
 import librosa
 import numpy as np
 import re
@@ -56,7 +56,7 @@ def root():
 
 @app.post("/analyze_audio", response_model=Features)
 async def analyze_audio(file: UploadFile = File(...)):
-    asr_model = load_model("tiny")
+    asr_model = whisper.load_model("tiny")
 
     with tempfile.NamedTemporaryFile(delete=False, suffix=".wav") as tmp:
         tmp.write(await file.read())
